@@ -23,7 +23,7 @@ function Intro(props) {
         className="divH visible"
         style={{ opacity: displayHome ? 0 : 1, display: displayVisible }}
       >
-        <img src="cofre.png" style={{ marginLeft: "25vw" }} />
+        <img src="cueva home.png" style={{ width: "100vw", height: "100vh" }} />
 
         <button className="buttonD" onClick={dispHome}>
           Descubre

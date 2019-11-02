@@ -60,6 +60,7 @@ body {
   margin-bottom: 4%;
 }
 
+<<<<<<< HEAD
 .flatText {
   position: relative;
   top: -25%;
@@ -72,3 +73,16 @@ body {
   top: -108%;
   color: black;
 }
+=======
+.divH2{
+  width:100vw;
+height:100vh;
+background-color: black;
+position:absolute;
+left:0;
+top:0;
+  z-index:1500;
+
+  
+}
+>>>>>>> 15c2ce0e0e1a08190a271bbbfd0df62071467973
