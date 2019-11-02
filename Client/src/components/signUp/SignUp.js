@@ -25,7 +25,7 @@ function SignUp(props) {
 
   return (
     <body className="bodybu">
-      <div className="loginBoxu">
+      <div className="loginBoxu rounded border border-dark">
         <h3 onClick={close} className="paraxu">
           X
         </h3>
