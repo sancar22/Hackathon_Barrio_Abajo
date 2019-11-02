@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import * as ROUTES from "../../routes/Routes";
 import { withRouter } from "react-router-dom";
 import "./Navigation.css";
+import { useSelector, useDispatch } from "react-redux";
+import {selectButton} from '../../actions'
 
 function Navigation(props) {
- 
+const dispatch = useDispatch();
 
+ const click = () => {
+      dispatch(selectButton())
+ }
   return (
     <body className="bodyy">
       <section>
@@ -25,15 +30,10 @@ function Navigation(props) {
               </a>
               
             </ul>
-            
-            <input
-              className="logout"
-              type="image"
-              src="logout1.png"
-             // onClick={logout}
-            />
-          
-           
+         
+          <button onClick ={click}>
+            Click
+          </button>
           </div>
         </header>
       </section>

@@ -1,63 +1,30 @@
 
-export const selectMarker = info => {
+export const selectButton = info => {
   return {
-    type: "SELECT_GUARDS",
+    type: "SELECT_SIGNIN",
     payload: info
   };
 };
 
-export const selectOnlineGuards = info => {
+export const selectButtonSign = info => {
   return {
-    type: "SELECT_ONLINE",
-    payload: info
-  };
-};
-
-
-export const tempArray = info => {
-  return {
-    type: "TEMP_ARRAY",
+    type: "SELECT_SIGNUP",
     payload: info
   };
 };
 
 
-export const notifPressed = info => {
+export const closeButton = info => {
   return {
-    type: "NOTIF_PRESSED",
+    type: "SELECT_CLOSE",
     payload: info
   };
 };
 
 
-export const fillPlace = info => {
+export const closeButtonSP = info => {
   return {
-    type: "FILL_PLACE",
-    payload: info
-  };
-};
-
-
-export const fillCode = info => {
-  return {
-    type: "FILL_CODE",
-    payload: info
-  };
-};
-
-
-export const fillCategory = info => {
-  return {
-    type: "FILL_CATEGORY",
-    payload: info
-  };
-};
-
-
-
-export const fillDescription = info => {
-  return {
-    type: "FILL_DESCRIPTION",
+    type: "SELECT_CLOSE_SP",
     payload: info
   };
 };

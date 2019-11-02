@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import 'https://fonts.googleapis.com/css?family=Noto+Sans';
-.bodybu {
+.bodyb {
   margin:0;
   padding:0;
   height: 87vh;
@@ -9,13 +9,13 @@
 
 }
 
-.loginBoxu {
+.loginBox {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 25vw;
-  height: 70vh;
+  height: 65vh;
   padding: 0px 40px;
   box-sizing: border-box;
   background: rgba(0,0,0,.5);
@@ -31,26 +31,26 @@
   margin: 4px 0 10px 0;
   margin: 10px;
 }
-.h2u{
+h2{
   margin:0;
-  padding: 0px 0 10px;
+  padding: 20px 0 20px;
   color: #fff;
   text-align:center;
 }
 
-.loginBoxu p{
+.loginBox p{
     margin: 0;
     padding: 0;
     font-weight: bold;
     color: #fff;
 }
 
-.loginBoxu input{
+.loginBox input{
   width:100%;
-  margin-bottom:5px;
+  margin-bottom:20px;
 }
-.loginBoxu input[type="text"],
-.loginBoxu input[type="password"]{
+.loginBox input[type="text"],
+.loginBox input[type="password"]{
   border:none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -62,7 +62,7 @@
 ::placeholder{
   color:rgba(255,255,255,.5);
 }
-.loginBoxu input[type="submit"]{
+.loginBox input[type="submit"]{
   border:none;
   outline:none;
   height: 40px;
@@ -71,31 +71,24 @@
   background: #8b0000;
   cursor: pointer;
   border-radius: 20px;
-  margin-top: 10px;
 }
 
-.loginBoxu input[type="submit"]:hover{
+.loginBox input[type="submit"]:hover{
   background: #b22222;
   color: #fff
 }
 
-.paraxu{
+.parax{
     margin-left: 20vw;
     position: relative;
-    margin-top: 8px;
-    
    
 
 }
 
-.paraxu:hover{
+.parax:hover{
     cursor: pointer;
-  
 }
 
-.acompo{
-  margin-left: 35px;
-}
-.acompo:hover{
-  cursor:pointer;
+.acomp:hover{
+    cursor:pointer;
 }
