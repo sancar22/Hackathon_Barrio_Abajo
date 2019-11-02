@@ -16,24 +16,19 @@
   width: 30vw;
   height: 70vh;
   border: rgb(221, 168, 23);
-  padding: 0px 40px;
   box-sizing: border-box;
-  background: green;
+  background: lightgray;
+  border-radius: 8px;
 }
 
-.Modal a {
-  display: block;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 12px;
-  text-align: center;
-  text-decoration: none;
-  margin: 4px 0 10px 0;
-  margin: 10px;
+.formu {
+  padding: 0px 40px;
 }
+
 .h2u {
   margin: 0;
-  padding: 0px 0 10px;
-  color: #fff;
+  padding: 0px 0px 3vh 0px;
+  color: black;
   text-align: center;
 }
 
@@ -41,7 +36,7 @@
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: #fff;
+  color: black;
 }
 
 .loginBoxu input {
@@ -51,35 +46,34 @@
 .loginBoxu input[type="text"],
 .loginBoxu input[type="password"] {
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid black;
   background: transparent;
   outline: none;
   height: 40px;
-  color: #fff;
+  color: black;
   font-size: 16px;
 }
 ::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rba(255, 255, 255, 0.8);
 }
 .loginBoxu input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
-  color: #fff;
+  color: black;
   font-size: 16px;
-  background: #8b0000;
+  background: #b4611e;
   cursor: pointer;
   border-radius: 20px;
   margin-top: 10px;
 }
 
 .loginBoxu input[type="submit"]:hover {
-  background: #b22222;
-  color: #fff;
+  background: #9c4d19;
+  color: black;
 }
 
 .paraxu {
-  margin-left: 20vw;
   position: relative;
   margin-top: 8px;
 }
@@ -90,7 +84,9 @@
 
 .acompo {
   margin-left: 35px;
+  color: gray;
 }
 .acompo:hover {
   cursor: pointer;
+  color: black;
 }

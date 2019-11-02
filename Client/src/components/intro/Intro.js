@@ -12,11 +12,11 @@ function Intro(props) {
       setDisplayVisible("none");
     }, 1000);
   };
-  useEffect(()=> {
-    if(displayVisible === "visible"){
-        dispatch(deselectHome())
+  useEffect(() => {
+    if (displayVisible === "visible") {
+      dispatch(deselectHome());
     }
-  },[])
+  }, []);
   const [displayVisible, setDisplayVisible] = useState("visible");
   const displayHome = useSelector(state => state.initHome);
   const handleClick = () => {
@@ -28,8 +28,7 @@ function Intro(props) {
         className="divH visible"
         style={{ opacity: displayHome ? 0 : 1, display: displayVisible }}
       >
-        <img src="cofre gofre.png" alt="" style={{ width: "100vw", height: "100vh" }} />
-
+        <img src="cofre gofre.png" alt="" style={{ width: "100vw", height: "100vh" }}/>
         <button className="buttonD" onClick={dispHome}>
           Descubre
         </button>

@@ -93,64 +93,66 @@ function HomePage(props) {
   });
 
   return (
-    <div>
+    <body>
       <div>
-        <Map
-          scrollWheelZoom={false}
-          className="map"
-          center={[10.989941, -74.783702]}
-          zoom={16}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <Polygon positions={baPolygon} />
-          <a href="#prueba">
+        <div style={{ marginBottom: "2vw" }}>
+          <Map
+            scrollWheelZoom={false}
+            className="map"
+            center={[10.989941, -74.783702]}
+            zoom={16}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Polygon positions={baPolygon} />
+            <a href="#prueba">
+              <Marker
+                position={[10.988517, -74.778619]}
+                icon={myIcon}
+                onClick={executeScroll1}
+              >
+                <Popup>Aduana</Popup>
+              </Marker>
+            </a>
             <Marker
-              position={[10.988517, -74.778619]}
-              icon={myIcon}
-              onClick={executeScroll1}
+              position={[10.986303, -74.778472]}
+              icon={myIcon1}
+              onClick={executeScroll3}
             >
-              <Popup>Aduana</Popup>
+              <Popup>Museo del Caribe</Popup>
             </Marker>
-          </a>
-          <Marker
-            position={[10.986303, -74.778472]}
-            icon={myIcon1}
-            onClick={executeScroll3}
-          >
-            <Popup>Museo del Caribe</Popup>
-          </Marker>
-          <Marker
-            position={[10.992788, -74.787784]}
-            icon={myIcon2}
-            onClick={executeScroll4}
-          >
-            <Popup>La Casa del Carnaval</Popup>
-          </Marker>
-          <Marker
-            position={[10.9893528, -74.7827108]}
-            icon={myIcon3}
-            onClick={executeScroll2}
-          >
-            <Popup>Los Murales</Popup>
-          </Marker>
-        </Map>
+            <Marker
+              position={[10.992788, -74.787784]}
+              icon={myIcon2}
+              onClick={executeScroll4}
+            >
+              <Popup>La Casa del Carnaval</Popup>
+            </Marker>
+            <Marker
+              position={[10.9893528, -74.7827108]}
+              icon={myIcon3}
+              onClick={executeScroll2}
+            >
+              <Popup>Los Murales</Popup>
+            </Marker>
+          </Map>
+        </div>
+        <div style={{ marginBottom: "2vw" }} ref={myRef1}>
+          <Aduana />
+        </div>
+        <div style={{ marginBottom: "2vw" }} ref={myRef2}>
+          <Mural />
+        </div>
+        <div style={{ marginBottom: "2vw" }} ref={myRef3}>
+          <Museo />
+        </div>
+        <div ref={myRef4}>
+          <Carnaval />
+        </div>
       </div>
-      <div ref={myRef1}>
-        <Aduana />
-      </div>
-      <div ref={myRef2}>
-        <Mural />
-      </div>
-      <div ref={myRef3}>
-        <Museo />
-      </div>
-      <div ref={myRef4}>
-        <Carnaval />
-      </div>
-    </div>
+    </body>
   );
 }
 
