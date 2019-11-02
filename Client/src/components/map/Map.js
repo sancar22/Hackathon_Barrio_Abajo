@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import './Map.css'
+import 'leaflet/dist/leaflet.css';
 import { Map, TileLayer, Polygon, Popup, Marker } from "react-leaflet";
+import L from 'leaflet'
 
 function Maps(props) {
   const baPolygon = [
@@ -29,6 +31,26 @@ function Maps(props) {
       [10.992704, -74.789235]
     ]
 
+    let myIcon = L.icon({
+      iconUrl: "mark.png",
+      iconSize: [40,40]
+    })
+    
+    let myIcon1 = L.icon({
+      iconUrl: "mariposa.png",
+      iconSize: [40,40]
+    })
+    
+    let myIcon2 = L.icon({
+      iconUrl: "marimon.png",
+      iconSize: [40,40]
+    })
+    
+    let myIcon3 = L.icon({
+      iconUrl: "mark.png",
+      iconSize: [40,40]
+    })
+
 
   return (
     
@@ -39,7 +61,26 @@ function Maps(props) {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
           <Polygon positions={baPolygon}/>
-          <Marker position={[10.9899615,-74.7846386]}/>
+          <Marker position={[10.988517, -74.778619]} icon={myIcon}>
+            <Popup>
+              Aduana
+            </Popup>
+          </Marker>
+          <Marker position={[10.986303, -74.778472]} icon={myIcon1}>
+            <Popup>
+              Museo del Caribe
+            </Popup>
+          </Marker>
+          <Marker position={[10.992788, -74.787784]} icon={myIcon2}>
+            <Popup>
+              La Casa del Carnaval
+            </Popup>
+          </Marker>
+          <Marker position={[10.9893528, -74.7827108]} icon={myIcon3}>
+            <Popup>
+              Los Murales
+            </Popup>
+          </Marker>
         </Map>
         
       </div> 
