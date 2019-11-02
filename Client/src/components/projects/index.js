@@ -54,7 +54,6 @@ function Projects(props) {
       >
         {propo}
       </div>
-      }
       <div style={{ opacity: controller ? 0.3 : 1 }}>
         <div className="container">
           <div className="flat">

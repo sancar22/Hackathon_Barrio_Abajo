@@ -16,10 +16,10 @@ nav {
 
 .initBtn {
   width: 12vw;
-  height: 3vw;
+  height: 3.8vw;
   background-image: url("../../assets/PLACA.png");
   background-position: top right;
-  background-size: 26vw 6vw;
+  background-size: 26vw 8vw;
   background-repeat: no-repeat;
   font-weight: bold;
 }
