@@ -5,14 +5,14 @@
   background-size: cover;
   width: 100vw;
   height: 87vh;
-  position: absolute;
+  
 }
 
 .titleMu {
   color: black;
   font-family: "Segoe UI";
   padding-top: 3%;
-  margin: 5% 8% 2%;
+  margin: 0% 8% 2%;
 }
 
 .textMu {

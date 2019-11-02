@@ -6,6 +6,7 @@ import SignUp from "../signUp/SignUp";
 import Aduana from "../aduana/Aduana";
 import Mural from "../mural/Mural";
 import Museo from "../museo/Museo";
+import Intro from "../intro/Intro"
 
 import Projects from "../projects";
 import * as ROUTES from "../../routes/Routes";
@@ -24,6 +25,7 @@ function App() {
           <Route exact path={ROUTES.MURAL} component={Mural} />
           <Route exact path={ROUTES.MUSEO} component={Museo} />
           <Route exact path={ROUTES.PROJECTS} component={Projects} />
+          <Route exact path={ROUTES.INTRO} component={Intro} />
         </Switch>
       </div>
     </Router>

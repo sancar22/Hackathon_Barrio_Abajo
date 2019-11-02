@@ -32,8 +32,8 @@ function Maps(props) {
     ]
 
     let myIcon = L.icon({
-      iconUrl: "mark.png",
-      iconSize: [40,40]
+      iconUrl: "tren.png",
+      iconSize: [40,60]
     })
     
     let myIcon1 = L.icon({
@@ -47,8 +47,8 @@ function Maps(props) {
     })
     
     let myIcon3 = L.icon({
-      iconUrl: "mark.png",
-      iconSize: [40,40]
+      iconUrl: "mural.jpg",
+      iconSize: [35,40]
     })
 
 
@@ -61,11 +61,13 @@ function Maps(props) {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
           <Polygon positions={baPolygon}/>
+          <a href="#prueba">
           <Marker position={[10.988517, -74.778619]} icon={myIcon}>
             <Popup>
               Aduana
             </Popup>
           </Marker>
+          </a>
           <Marker position={[10.986303, -74.778472]} icon={myIcon1}>
             <Popup>
               Museo del Caribe

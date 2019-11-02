@@ -4,7 +4,7 @@ import "./Navigation.css";
 
 function Navigation(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <Link className="navbar-brand" to="/">
         TesoroQuillero
       </Link>
