@@ -9,7 +9,7 @@ function Mural(props) {
     <div className="backMu container-fluid">
       <h1 className="titleMu">PAR VIAL DE LA CARRERA 50</h1>
       <div className="row">
-        <p className="textMu col-sm-5">
+        <p className="textMu col-sm-4">
           El Par Vial de la carrera 50 se ha convertido en una vía que han
           tomado varios festivales de arte urbano y artistas plásticos como
           lienzo para expresar sus obras en grafiti. Sus altos muros debido a
