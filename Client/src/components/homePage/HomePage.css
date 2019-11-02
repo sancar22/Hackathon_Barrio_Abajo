@@ -23,3 +23,29 @@
     
 }
 
+.divH{
+    width:100vw;
+	height:100vh;
+	background-color: black;
+	position:absolute;
+	left:0;
+	top:0;
+    z-index:1040;
+
+    
+}
+
+.buttonD{
+   position: absolute;
+   z-index: 9999;
+   left: 45vw;
+   top: 60vh;
+   border-radius: 10px;
+
+}
+.visible {
+    
+    
+    transition: opacity 4s linear;
+  }
+  
