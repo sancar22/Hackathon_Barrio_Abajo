@@ -1,12 +1,11 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+@import "https://fonts.googleapis.com/css?family=Noto+Sans";
 .bodybu {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   height: 87vh;
   background-size: cover;
   font-family: sans-serif;
-
 }
 
 .loginBoxu {
@@ -14,12 +13,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25vw;
+  width: 30vw;
   height: 70vh;
+  border: rgb(221, 168, 23);
   padding: 0px 40px;
   box-sizing: border-box;
-  background: rgba(0,0,0,.5);
- 
+  background: green;
 }
 
 .Modal a {
@@ -31,27 +30,27 @@
   margin: 4px 0 10px 0;
   margin: 10px;
 }
-.h2u{
-  margin:0;
+.h2u {
+  margin: 0;
   padding: 0px 0 10px;
   color: #fff;
-  text-align:center;
+  text-align: center;
 }
 
-.loginBoxu p{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    color: #fff;
+.loginBoxu p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
 }
 
-.loginBoxu input{
-  width:100%;
-  margin-bottom:5px;
+.loginBoxu input {
+  width: 100%;
+  margin-bottom: 5px;
 }
 .loginBoxu input[type="text"],
-.loginBoxu input[type="password"]{
-  border:none;
+.loginBoxu input[type="password"] {
+  border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
@@ -59,12 +58,12 @@
   color: #fff;
   font-size: 16px;
 }
-::placeholder{
-  color:rgba(255,255,255,.5);
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
-.loginBoxu input[type="submit"]{
-  border:none;
-  outline:none;
+.loginBoxu input[type="submit"] {
+  border: none;
+  outline: none;
   height: 40px;
   color: #fff;
   font-size: 16px;
@@ -74,28 +73,24 @@
   margin-top: 10px;
 }
 
-.loginBoxu input[type="submit"]:hover{
+.loginBoxu input[type="submit"]:hover {
   background: #b22222;
-  color: #fff
+  color: #fff;
 }
 
-.paraxu{
-    margin-left: 20vw;
-    position: relative;
-    margin-top: 8px;
-    
-   
-
+.paraxu {
+  margin-left: 20vw;
+  position: relative;
+  margin-top: 8px;
 }
 
-.paraxu:hover{
-    cursor: pointer;
-  
+.paraxu:hover {
+  cursor: pointer;
 }
 
-.acompo{
+.acompo {
   margin-left: 35px;
 }
-.acompo:hover{
-  cursor:pointer;
+.acompo:hover {
+  cursor: pointer;
 }
