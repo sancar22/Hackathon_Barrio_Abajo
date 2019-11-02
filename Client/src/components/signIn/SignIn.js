@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import "./SignIn.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeButton, selectButtonSign } from "../../actions";
 
 function SignIn(props) {
+  const disp = useSelector(state => state.buttonSignIn);
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const login = () => {
+  const login = e => {
+    e.preventDefault();
     console.log("Logged In");
+    close();
   };
   const handleUserChange = e => {
     const currentEmail = e.target.value;
@@ -29,8 +32,8 @@ function SignIn(props) {
   };
 
   return (
-    <body className="bodyb">
-      <div className="loginBox">
+    <div className={`bodyb ${disp ? "visible" : "hidden"}`}>
+      <div className="loginBox h-245">
         <div className="row">
           <div className="col-md-12">
             <h3 onClick={close} className="parax float-right">
@@ -67,7 +70,7 @@ function SignIn(props) {
           </a>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 

@@ -7,3 +7,11 @@
   left: 35vw;
   z-index: 1400;
 }
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
