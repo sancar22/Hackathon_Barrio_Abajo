@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { selectHome, deselectHome } from "../../actions";
 import "./Intro.css";
 
@@ -28,7 +28,7 @@ function Intro(props) {
         className="divH visible"
         style={{ opacity: displayHome ? 0 : 1, display: displayVisible }}
       >
-        <img src="cofre gofre.png" style={{ width: "100vw", height: "100vh" }} />
+        <img src="cofre gofre.png" alt="" style={{ width: "100vw", height: "100vh" }} />
 
         <button className="buttonD" onClick={dispHome}>
           Descubre

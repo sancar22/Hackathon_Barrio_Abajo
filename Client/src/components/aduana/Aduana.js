@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { closeButton } from "../../actions";
 import "./Aduana.css";
 
 function Aduana(props) {
