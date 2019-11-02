@@ -6,6 +6,13 @@ export const selectButton = info => {
   };
 };
 
+export const selectHome = info => {
+  return {
+    type: "SELECT_HOME",
+    payload: info
+  };
+};
+
 export const selectButtonSign = info => {
   return {
     type: "SELECT_SIGNUP",

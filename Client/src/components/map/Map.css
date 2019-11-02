@@ -1,0 +1,9 @@
+.map {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100vw;
+    margin-left: 0vw;
+       
+}
