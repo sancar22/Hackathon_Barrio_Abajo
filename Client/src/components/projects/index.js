@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import { withRouter, Link } from "react-router-dom";
-import {useDispatch, useSelector} from 'react-redux';
-import {correctButton, deCorrectButton} from '../../actions/index'
+import { useDispatch, useSelector } from "react-redux";
+import { correctButton, deCorrectButton } from "../../actions/index";
 import "./Projects.css";
 import Proposal from "../proposal/Proposal";
 
 function Projects(props) {
-  const dispatch = useDispatch()
-  const controller = useSelector((state)=> state.correctEvent)
+  const dispatch = useDispatch();
+  const controller = useSelector(state => state.correctEvent);
   const [projects, setProjects] = useState([]);
   const [social, setSocial] = useState(false);
   const [cultural, setCultural] = useState(false);
   const [aseo, setAseo] = useState(false);
   const [deportiva, setDeportiva] = useState(false);
+  const [event, setEvent] = useState();
   const myRef = useRef(null);
 
   useEffect(() => {
@@ -30,9 +31,10 @@ function Projects(props) {
     window.scrollTo(0, ref.current.offsetTop);
     //ref.current.focus()
   };
-  const handleClickEvent = () => {
+  const handleClickEvent = data => {
     dispatch(correctButton());
     executeScroll1();
+    setEvent(data);
   };
   useEffect(() => {
     fetch("http://localhost:4000/api/v1/user/events")
@@ -43,14 +45,14 @@ function Projects(props) {
         setProjects(data.data);
       });
   }, []);
-
+  let propo = event ? (<Proposal id={event.id} title={event.title} desc={event.description} date={event.date} place={event.place} contact={event.contact} />) : ""
   return (
     <div>
       <div
         ref={myRef}
         style={{ visibility: controller ? "visible" : "hidden" }}
       >
-        <Proposal />{" "}
+        {propo}
       </div>
       }
       <div style={{ opacity: controller ? 0.3 : 1 }}>
@@ -171,7 +173,9 @@ function Projects(props) {
                         {project.place}
                       </p>
                       <div
-                        onClick={handleClickEvent}
+                        onClick={() => {
+                          handleClickEvent(project);
+                        }}
                         className="btn btn-primary  mr-auto ml-auto text-center"
                       >
                         Ver evento
