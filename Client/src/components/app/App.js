@@ -7,6 +7,7 @@ import Aduana from "../aduana/Aduana";
 import Mural from "../mural/Mural";
 import Museo from "../museo/Museo";
 
+import Projects from "../projects";
 import * as ROUTES from "../../routes/Routes";
 
 import Navigation from "../navigation/Navigation";
@@ -22,6 +23,7 @@ function App() {
           <Route exact path={ROUTES.ADUANA} component={Aduana} />
           <Route exact path={ROUTES.MURAL} component={Mural} />
           <Route exact path={ROUTES.MUSEO} component={Museo} />
+          <Route exact path={ROUTES.PROJECTS} component={Projects} />
         </Switch>
       </div>
     </Router>

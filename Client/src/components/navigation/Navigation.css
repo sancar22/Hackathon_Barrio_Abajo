@@ -1,40 +1,13 @@
-.navbar {
-  background-color: rgba(248, 245, 245, 0.8);
-  height: 70px;
-}
-.brand {
-  color: black;
+nav {
+  background-image: url("https://www.csstextures.com/old-paper-T19.jpg");
+  background-repeat: repeat;
 }
 
-.links {
-  color: black;
-}
-.links:hover {
-  color: black;
-}
-.navbar-toggler2 {
-  background-color: black;
+.initBtn {
   border-style: solid;
-  border-color: black;
-  border-width: 2px;
   border-radius: 10px;
-  z-index: 999999;
-}
-.collapse {
-  height: 100%;
-}
-
-@media (min-width: 992px) {
-  .navbar-toggler2 {
-    display: none;
-  }
-}
-
-.but {
-  width: 100%;
-  height: 100%;
-}
-
-.btn {
-  margin: 15px 0px 15px 0px;
+  background-image: url("https://www.csstextures.com/wood-parquet-T27.jpg");
+  background-repeat: repeat;
+  font-weight: bold;
+  color: rgb(7, 0, 0);
 }

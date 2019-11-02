@@ -1,0 +1,16 @@
+body {
+  overflow-x: hidden;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+.jumb {
+  margin-top: 2%;
+  background-image: url("https://www.csstextures.com/wood-parquet-T27.jpg");
+  background-repeat: repeat;
+  border-radius: 10px;
+}
+
+.contRow {
+}
