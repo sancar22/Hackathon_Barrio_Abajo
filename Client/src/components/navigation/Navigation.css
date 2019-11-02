@@ -30,19 +30,6 @@
   }
 }
 
-<<<<<<< HEAD
-.buttons{
-    height: 7vh;
-    width: 3.5vw;
-    
-    padding: 3vh 0vw;
-    margin-left: 90vw;
-    display:block;
-    flex-direction: column;
-
-}
-
-=======
 .but {
   width: 100%;
   height: 100%;
@@ -51,4 +38,3 @@
 .btn {
   margin: 15px 0px 15px 0px;
 }
->>>>>>> 5dd129656a78b10d7c2a556203f195d434198ab1
