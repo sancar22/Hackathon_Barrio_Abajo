@@ -2,15 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import SignIn from "../signIn/SignIn";
+import SignUp from "../signUp/SignUp";
 import "./Proposal.css";
-import { selectButton } from "../../actions";
+import { selectButton, deCorrectButton } from "../../actions";
 
 function Proposal(props) {
   const dispatch = useDispatch();
   const joinEvent = id => {
     const token = sessionStorage.getItem("token");
     if (token) {
-      fetch("http://localhost:4000/user/joinevent", {
+      fetch("http://localhost:4000/api/v1/user/joinevent", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -28,6 +29,7 @@ function Proposal(props) {
         })
         .then(data => {
           console.log(data);
+          dispatch(deCorrectButton());
         });
     } else {
       dispatch(selectButton());
@@ -58,6 +60,7 @@ function Proposal(props) {
         </div>
       </div>
       <SignIn />
+      <SignUp />
     </div>
   );
 }

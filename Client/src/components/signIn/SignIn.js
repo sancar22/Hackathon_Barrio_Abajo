@@ -11,7 +11,24 @@ function SignIn(props) {
   const [password, setPassword] = useState("");
   const login = e => {
     e.preventDefault();
-    console.log("Logged In");
+    fetch("http://localhost:4000/api/v1/user/login", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data);
+        sessionStorage.setItem("token", data.token);
+      });
     close();
   };
   const handleUserChange = e => {
@@ -33,7 +50,7 @@ function SignIn(props) {
 
   return (
     <div className={`bodyb ${disp ? "visible" : "hidden"}`}>
-      <div className="loginBox h-245">
+      <div className="loginBox">
         <div className="row">
           <div className="col-md-12">
             <h3 onClick={close} className="parax float-right">
