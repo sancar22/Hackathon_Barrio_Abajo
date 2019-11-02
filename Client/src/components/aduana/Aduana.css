@@ -1,0 +1,30 @@
+.backAdu {
+  background-image: url(../../assets/aduana.png);
+  background-color: whitesmoke;
+  background-size: cover;
+  width: 100vw;
+  height: 87vh;
+  /* position: absolute; */
+}
+
+.titleAdu {
+  color: black;
+  font-family: "Segoe UI";
+  padding-top: 3%;
+  margin: 0% 20% 2%;
+}
+
+.textAdu {
+  color: black;
+  font-family: "Segoe UI";
+  text-align: justify;
+  margin-left: 15%;
+}
+
+li {
+  padding-bottom: 2vh;
+}
+
+.listAdu {
+  margin-top: 5%;
+}

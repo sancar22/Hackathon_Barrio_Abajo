@@ -1,0 +1,28 @@
+.backMus {
+  background-image: url(../../assets/museo.png);
+  background-position: -7vh 0vw;
+  background-color: whitesmoke;
+  background-size: cover;
+  width: 100vw;
+  height: 87vh;
+  position: absolute;
+}
+
+.titleMus {
+  color: black;
+  font-family: "Segoe UI";
+  padding-top: 10%;
+  margin-left: 54%;
+}
+
+.textMus {
+  color: black;
+  font-family: "Segoe UI";
+  text-align: justify;
+  margin-left: 12%;
+  margin-top: 3%;
+}
+
+.listMus {
+  margin-top: 5%;
+}
