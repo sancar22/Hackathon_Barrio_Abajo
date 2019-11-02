@@ -1,5 +1,4 @@
 class Image < ApplicationRecord
-    belongs_to :events
-    validates :name, presence: true
-    
+  belongs_to :event
+  validates :name, presence: true
 end

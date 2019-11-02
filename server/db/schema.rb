@@ -10,35 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_01_212431) do
+ActiveRecord::Schema.define(version: 2019_11_02_003531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "assistants", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "events_id"
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["events_id"], name: "index_assistants_on_events_id"
-    t.index ["users_id"], name: "index_assistants_on_users_id"
+    t.index ["event_id"], name: "index_assistants_on_event_id"
+    t.index ["user_id"], name: "index_assistants_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string "title"
     t.text "text"
-    t.bigint "users_id"
-    t.bigint "events_id"
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["events_id"], name: "index_comments_on_events_id"
-    t.index ["users_id"], name: "index_comments_on_users_id"
+    t.index ["event_id"], name: "index_comments_on_event_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "date"
+    t.date "date"
     t.string "place"
     t.string "contact"
     t.string "category"
@@ -48,36 +48,36 @@ ActiveRecord::Schema.define(version: 2019_11_01_212431) do
 
   create_table "images", force: :cascade do |t|
     t.string "name"
-    t.bigint "events_id"
+    t.bigint "event_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["events_id"], name: "index_images_on_events_id"
+    t.index ["event_id"], name: "index_images_on_event_id"
   end
 
   create_table "owners", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "events_id"
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["events_id"], name: "index_owners_on_events_id"
-    t.index ["users_id"], name: "index_owners_on_users_id"
+    t.index ["event_id"], name: "index_owners_on_event_id"
+    t.index ["user_id"], name: "index_owners_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "last_name"
-    t.string "password_digest"
     t.string "email"
     t.string "cel"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "assistants", "events", column: "events_id"
-  add_foreign_key "assistants", "users", column: "users_id"
-  add_foreign_key "comments", "events", column: "events_id"
-  add_foreign_key "comments", "users", column: "users_id"
-  add_foreign_key "images", "events", column: "events_id"
-  add_foreign_key "owners", "events", column: "events_id"
-  add_foreign_key "owners", "users", column: "users_id"
+  add_foreign_key "assistants", "events"
+  add_foreign_key "assistants", "users"
+  add_foreign_key "comments", "events"
+  add_foreign_key "comments", "users"
+  add_foreign_key "images", "events"
+  add_foreign_key "owners", "events"
+  add_foreign_key "owners", "users"
 end
