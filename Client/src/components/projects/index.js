@@ -21,7 +21,10 @@ function Projects(props) {
   return (
     <div className="container">
       <div className="flat">
-        <h1 style={{ fontWeight: "bold", color: "white" }}>Eventos Llaveria</h1>
+        <div className="flatText"></div>
+        <h1 className="FText" style={{ fontWeight: "bold", color: "white" }}>
+          ACTIVIDADES LLAVERÍA
+        </h1>
       </div>
       <div className="container">
         <div className="row">

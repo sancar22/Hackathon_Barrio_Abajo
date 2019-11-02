@@ -5,9 +5,7 @@ import "./Navigation.css";
 function Navigation(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <Link className="navbar-brand" to="/">
-        TesoroQuillero
-      </Link>
+      <Link className="navbar-brand title-brand" to="/"></Link>
       <button
         className="navbar-toggler initBtn"
         type="button"
@@ -22,7 +20,7 @@ function Navigation(props) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link initBtn" to="/projects">
+            <Link className="nav-link initBtn text-center" to="/projects">
               Iniciativas
             </Link>
           </li>

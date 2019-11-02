@@ -5,6 +5,7 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
 .jumb {
   margin-top: 2%;
   background-image: url("https://www.csstextures.com/wood-parquet-T27.jpg");
@@ -48,12 +49,26 @@ body {
 
 .flat {
   position: relative;
-  background-color: rgb(88, 39, 10);
+  background-image: url("../../assets/casa.png");
+  background-position: 0% -104%;
   width: 100vw;
-  height: 8.5vw;
+  height: 12.5vw;
   left: -9.4%;
   text-align: center;
   padding-top: 2.8%;
   margin-top: 4%;
   margin-bottom: 4%;
+}
+
+.flatText {
+  position: relative;
+  top: -25%;
+  background-color: black;
+  height: 125%;
+  opacity: 0.5;
+}
+.FText {
+  position: relative;
+  top: -108%;
+  color: black;
 }
