@@ -1,20 +1,18 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
-import {useSelector} from 'react-redux'
+import { useSelector } from "react-redux";
 import "./Navigation.css";
 
 function Navigation(props) {
-  const controller = useSelector((state)=> state.initHome)
+  const controller = useSelector(state => state.initHome);
   return (
-<<<<<<< HEAD
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <Link className="navbar-brand title-brand" to="/"></Link>
-=======
-    <nav style={{opacity: controller ? 0.3:1}}className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav
+      style={{ opacity: controller ? 0.3 : 1 }}
+      className="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+    >
       <Link className="navbar-brand" to="/">
         TesoroQuillero
       </Link>
->>>>>>> 15c2ce0e0e1a08190a271bbbfd0df62071467973
       <button
         className="navbar-toggler initBtn"
         type="button"
