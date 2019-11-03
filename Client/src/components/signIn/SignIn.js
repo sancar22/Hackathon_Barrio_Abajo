@@ -31,31 +31,41 @@ function SignIn(props) {
   return (
     <body className="bodyb">
       <div className="loginBox">
-        <h3 onClick={close} className="parax">
-          X
-        </h3>
+        <div className="row">
+          <div className="col-md-12">
+            <h3 onClick={close} className="parax float-right">
+              X
+            </h3>
+          </div>
+        </div>
         <h2>¡Bienvenido!</h2>
-
-        <form onSubmit={login}>
-          <p>Email</p>
-          <input
-            type="text"
-            placeholder="Enter your email"
-            value={email}
-            onChange={handleUserChange}
-          />
-          <p>Password</p>
-          <input
-            type="password"
-            placeholder="*********"
-            value={password}
-            onChange={handleUserPassword}
-          />
-          <input type="submit" name="" value="Sign In" />
-        </form>
-        <a className="acomp" onClick={signU}>
-          ¿No tienes cuenta aún? Regístrate.
-        </a>
+        <div className="formul">
+          <form onSubmit={login}>
+            <p>Email</p>
+            <input
+              type="text"
+              placeholder="Enter your email"
+              value={email}
+              onChange={handleUserChange}
+            />
+            <p>Password</p>
+            <input
+              type="password"
+              placeholder="*********"
+              value={password}
+              onChange={handleUserPassword}
+            />
+            <input
+              type="submit"
+              style={{ margginTop: "8vh" }}
+              name=""
+              value="Sign In"
+            />
+          </form>
+          <a className="acomp" onClick={signU}>
+            ¿No tienes cuenta aún? Regístrate.
+          </a>
+        </div>
       </div>
     </body>
   );

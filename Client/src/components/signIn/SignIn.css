@@ -1,12 +1,11 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+@import "https://fonts.googleapis.com/css?family=Noto+Sans";
 .bodyb {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   height: 87vh;
   background-size: cover;
   font-family: sans-serif;
-
 }
 
 .loginBox {
@@ -14,81 +13,78 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25vw;
+  width: 30vw;
   height: 65vh;
-  padding: 0px 40px;
   box-sizing: border-box;
-  background: rgba(0,0,0,.5);
- 
+  background: lightgray;
 }
 
-.Modal a {
-  display: block;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 12px;
+.formul {
+  padding: 0px 40px;
+}
+
+h2 {
+  margin: 0;
+  padding: 20px 0 35px;
+  color: black;
   text-align: center;
-  text-decoration: none;
-  margin: 4px 0 10px 0;
-  margin: 10px;
-}
-h2{
-  margin:0;
-  padding: 20px 0 20px;
-  color: #fff;
-  text-align:center;
 }
 
-.loginBox p{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    color: #fff;
+.loginBox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: black;
 }
 
-.loginBox input{
-  width:100%;
-  margin-bottom:20px;
+.loginBox input {
+  width: 100%;
+  margin-bottom: 20px;
 }
 .loginBox input[type="text"],
-.loginBox input[type="password"]{
-  border:none;
-  border-bottom: 1px solid #fff;
+.loginBox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid black;
   background: transparent;
   outline: none;
   height: 40px;
-  color: #fff;
+  color: black;
   font-size: 16px;
 }
-::placeholder{
-  color:rgba(255,255,255,.5);
+::placeholder {
+  color: rgba(255, 255, 255, 0.8);
 }
-.loginBox input[type="submit"]{
-  border:none;
-  outline:none;
+.loginBox input[type="submit"] {
+  border: none;
+  outline: none;
   height: 40px;
-  color: #fff;
+  color: black;
   font-size: 16px;
-  background: #8b0000;
+  background: #b4611e;
   cursor: pointer;
   border-radius: 20px;
 }
 
-.loginBox input[type="submit"]:hover{
-  background: #b22222;
-  color: #fff
+.loginBox input[type="submit"]:hover {
+  background: #9c4d19;
+  color: black;
 }
 
-.parax{
-    margin-left: 20vw;
-    position: relative;
-   
-
+.parax {
+  margin-right: 7px;
+  position: relative;
 }
 
-.parax:hover{
-    cursor: pointer;
+.parax:hover {
+  cursor: pointer;
 }
 
-.acomp:hover{
-    cursor:pointer;
+.acompo {
+  margin-left: 35px;
+  color: gray;
+}
+
+.acomp:hover {
+  cursor: pointer;
+  color: black;
 }
