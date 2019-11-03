@@ -3,11 +3,23 @@ nav {
   background-repeat: repeat;
 }
 
+.title-brand {
+  background-image: url("../../assets/LOGO.png");
+  background-position: top right;
+  background-size: 30vw;
+  background-repeat: no-repeat;
+  height: 3vw;
+  width: 32%;
+  position: relative;
+  left: 0%;
+}
+
 .initBtn {
-  border-style: solid;
-  border-radius: 10px;
-  background-image: url("https://www.csstextures.com/wood-parquet-T27.jpg");
-  background-repeat: repeat;
+  width: 12vw;
+  height: 3vw;
+  background-image: url("../../assets/PLACA.png");
+  background-position: top right;
+  background-size: 26vw 6vw;
+  background-repeat: no-repeat;
   font-weight: bold;
-  color: rgb(7, 0, 0);
 }
