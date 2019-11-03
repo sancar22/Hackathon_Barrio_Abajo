@@ -45,7 +45,18 @@ function Projects(props) {
         setProjects(data.data);
       });
   }, []);
-  let propo = event ? (<Proposal id={event.id} title={event.title} desc={event.description} date={event.date} place={event.place} contact={event.contact} />) : ""
+  let propo = event ? (
+    <Proposal
+      id={event.id}
+      title={event.title}
+      desc={event.description}
+      date={event.date}
+      place={event.place}
+      contact={event.contact}
+    />
+  ) : (
+    ""
+  );
   return (
     <div>
       <div
@@ -54,7 +65,6 @@ function Projects(props) {
       >
         {propo}
       </div>
-      }
       <div style={{ opacity: controller ? 0.3 : 1 }}>
         <div className="container">
           <div className="flat">
@@ -111,34 +121,45 @@ function Projects(props) {
               <div
                 onClick={() => {
                   console.log(projects);
-                  if (social) {
-                    setProjects(
-                      projects.filter(project => {
-                        return project.category !== "social";
-                      })
-                    );
-                  }
-                  if (cultural) {
-                    setProjects(
-                      projects.filter(project => {
-                        return project.category !== "cultural";
-                      })
-                    );
-                  }
-                  if (aseo) {
-                    setProjects(
-                      projects.filter(project => {
-                        return project.category !== "aseo";
-                      })
-                    );
-                  }
-                  if (deportiva) {
-                    setProjects(
-                      projects.filter(project => {
-                        return project.category !== "deportivo";
-                      })
-                    );
-                  }
+                  fetch("http://localhost:4000/api/v1/user/events")
+                    .then(response => {
+                      return response.json();
+                    })
+                    .then(data => {
+                      setProjects(data.data);
+                    })
+                    .then(() => {
+                      if (projects.length > 0) {
+                        if (social) {
+                          setProjects(
+                            projects.filter(project => {
+                              return project.category == "social";
+                            })
+                          );
+                        }
+                        if (cultural) {
+                          setProjects(
+                            projects.filter(project => {
+                              return project.category == "cultural";
+                            })
+                          );
+                        }
+                        if (aseo) {
+                          setProjects(
+                            projects.filter(project => {
+                              return project.category == "aseo";
+                            })
+                          );
+                        }
+                        if (deportiva) {
+                          setProjects(
+                            projects.filter(project => {
+                              return project.category == "deportivo";
+                            })
+                          );
+                        }
+                      }
+                    });
                 }}
                 className={`btn filterBtn filt`}
               >

@@ -14,7 +14,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30vw;
-  height: 65vh;
+  height: 35vw;
   box-sizing: border-box;
   background: lightgray;
 }

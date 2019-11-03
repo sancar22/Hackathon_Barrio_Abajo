@@ -11,6 +11,7 @@
     "mdbreact": "^4.20.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.13.0",
+    "raleway-webfont": "^3.0.1",
     "react": "^16.10.2",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.10.2",

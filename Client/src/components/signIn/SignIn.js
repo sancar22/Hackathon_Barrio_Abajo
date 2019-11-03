@@ -1,15 +1,35 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import "./SignIn.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeButton, selectButtonSign } from "../../actions";
 
 function SignIn(props) {
+  const disp = useSelector(state => state.buttonSignIn);
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const login = () => {
-    console.log("Logged In");
+  const login = e => {
+    e.preventDefault();
+    fetch("http://localhost:4000/api/v1/user/login", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data);
+        sessionStorage.setItem("token", data.token);
+      });
+    close();
   };
   const handleUserChange = e => {
     const currentEmail = e.target.value;
@@ -29,7 +49,7 @@ function SignIn(props) {
   };
 
   return (
-    <body className="bodyb">
+    <div className={`bodyb ${disp ? "visible" : "hidden"}`}>
       <div className="loginBox">
         <div className="row">
           <div className="col-md-12">
@@ -67,7 +87,7 @@ function SignIn(props) {
           </a>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 

@@ -8,11 +8,9 @@ function Navigation(props) {
   return (
     <nav
       style={{ opacity: controller ? 0.3 : 1 }}
-      className="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+      className="navbar navbar-expand-lg sticky-top"
     >
-      <Link className="navbar-brand" to="/">
-        TesoroQuillero
-      </Link>
+      <Link className="navbar-brand title-brand" to="/"/>
       <button
         className="navbar-toggler initBtn"
         type="button"

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import "./SignUp.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeButton, closeButtonSP } from "../../actions";
 
 function SignUp(props) {
+  const disp = useSelector(state => state.buttonSignUp);
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -12,8 +13,31 @@ function SignUp(props) {
   const [cellphone, setCellphone] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConf, setPasswordConf] = useState("");
-  const login = () => {
-    console.log("Logged In");
+  const register = e => {
+    e.preventDefault();
+    fetch("http://localhost:4000/api/v1/user/register", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        last_name: lastName,
+        password: password,
+        password_confirmation: passwordConf,
+        cel: cellphone
+      })
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data);
+      });
+    console.log("register");
+    signU();
   };
 
   const close = () => {
@@ -24,7 +48,7 @@ function SignUp(props) {
   };
 
   return (
-    <body className="bodybu">
+    <div className={`bodybu ${disp ? "visible" : "hidden"}`}>
       <div className="loginBoxu border border-dark container">
         <div className="row">
           <div className="col-md-12">
@@ -40,7 +64,7 @@ function SignUp(props) {
         <div className="formu">
           <h2 className="h2u">¡Crea tu cuenta!</h2>
 
-          <form onSubmit={login}>
+          <form onSubmit={register}>
             <input
               type="text"
               placeholder="Nombre"
@@ -89,12 +113,12 @@ function SignUp(props) {
               value="Crear mi cuenta"
             />
           </form>
-          <a className="acompo" href="/" onClick={signU}>
+          <div className="acompo" onClick={signU}>
             Ya tengo cuenta. Ingresar.
-          </a>
+          </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 

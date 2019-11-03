@@ -3,15 +3,16 @@
   background-position: bottom right;
   background-color: whitesmoke;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100vw;
-  height: 87vh;
+  height: 105vh;
   
 }
 
 .titleMu {
   color: black;
   font-family: "Segoe UI";
-  padding-top: 3%;
+  padding-top: 8%;
   margin: 0% 8% 2%;
 }
 
