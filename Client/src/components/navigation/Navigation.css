@@ -25,3 +25,7 @@ nav {
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
+
+.inic:hover{
+   color: rgba(204, 170, 115, 0.8)
+}

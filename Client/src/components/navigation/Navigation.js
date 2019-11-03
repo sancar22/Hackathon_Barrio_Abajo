@@ -25,7 +25,7 @@ function Navigation(props) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link initBtn text-center" to="/projects">
+            <Link className="nav-link initBtn text-center inic" to="/projects">
               Iniciativas
             </Link>
           </li>

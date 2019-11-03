@@ -79,7 +79,7 @@ function HomePage(props) {
     scrollToRef(myRef4);
   };
   const scrollToRef = ref => {
-    window.scrollTo(0, ref.current.offsetTop - 75);
+    window.scrollTo(0, ref.current.offsetTop-25);
     //ref.current.focus()
   };
 
@@ -93,7 +93,7 @@ function HomePage(props) {
   });
 
   return (
-    <body>
+    
       <div>
         <div style={{ marginBottom: "2vw" }}>
           <Map
@@ -151,8 +151,10 @@ function HomePage(props) {
         <div ref={myRef4}>
           <Carnaval />
         </div>
+    
+  
       </div>
-    </body>
+   
   );
 }
 

@@ -43,27 +43,33 @@
   margin-left: 72vw;
 }
 
+
 .buttonD {
   left: 47.5vw;
-  top: 85vh;
-}
-.buttonD {
-  left: 47.5vw;
-  top: 85vh;
+  top: 89vh;
   font-weight: bold;
-  background-color: rgb(207, 207, 102);
+  background-color:  rgb(235, 195, 122);
   transition: 0.5s;
 }
 
 .buttonD:hover {
-  background-color: rgba(245, 199, 49, 0.931);
+  background-color: rgba(202, 164, 102, 0.8);
 }
 
 .parag {
   position: absolute;
   z-index: 1000;
   color: white;
-  left: 29vw;
+  left: 31vw;
   top: 36vh;
   font-size: 2vw;
+}
+
+.overB{
+
+  color: white;
+  border-radius: 10px;
+  width:16vw;
+  right: -3vw;
+  top:1vw;
 }

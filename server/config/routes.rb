@@ -7,8 +7,8 @@ Rails.application.routes.draw do
       post '/user/addevent', to: 'users#createEvent'
       post '/user/joinevent', to: 'users#joinEvent'
       post '/user/comment', to: 'users#commentEvent'
+      post '/user/comments', to: 'users#getComments'
       get '/user/events', to: 'users#getEvents'
-      get '/user/comments', to: 'users#getComments'
       get '/user/eventowner', to: 'users#getEventOwner'
     end
   end

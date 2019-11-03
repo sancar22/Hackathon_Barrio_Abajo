@@ -1,34 +1,53 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./Comment.css";
 import Comments from "./Comments";
 
 function Comment(props) {
   const [currentComment, setCurrentComment] = useState("");
   const [title, setTitle] = useState("");
-  const [completeComment, setCompleteComment] = useState([]);
-  const submission = () => {
-    setCompleteComment([
-      ...completeComment,
-      { title: title, comment: completeComment }
-    ]);
+  const commentID = useSelector(state => state.proposalID);
+  const submission = e => {
+    let data = {
+      comment: {
+        event_id: commentID,
+        title: title,
+        text: currentComment
+      }
+    };
+    e.preventDefault();
+    const token = sessionStorage.getItem("token");
+    fetch("http://localhost:4000/api/v1/user/comment", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: token
+      },
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data);
+        setTitle("");
+        setCurrentComment("");
+      });
   };
-
-  useEffect(() => {
-    console.log(completeComment);
-  }, [completeComment]);
 
   return (
     <div className="page">
-      <div className="box  container rounded">
+      <div className="box container rounded">
         <div className="row titu text-light">LISTA DE COMENTARIOS</div>
         <div className="row">
           <Comments />
         </div>
         <div className="Newone rounded">
-          <div className="text-light">ADD COMMENT</div>
+          <div className="text-light">Añadir comentario</div>
           <div className="form-group">
-            <label for="usr">Title:</label>
+            <label for="usr">Titulo:</label>
             <input
               type="text"
               value={title}
@@ -38,7 +57,7 @@ function Comment(props) {
             />
           </div>
           <div className="form-group">
-            <label for="comment">Comment:</label>
+            <label for="comment">Comentario:</label>
             <textarea
               value={currentComment}
               onChange={e => setCurrentComment(e.target.value)}
