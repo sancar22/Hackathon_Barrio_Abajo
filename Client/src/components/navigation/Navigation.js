@@ -1,10 +1,15 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./Navigation.css";
 
 function Navigation(props) {
+  const controller = useSelector(state => state.correctEvent);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav
+      style={{ opacity: controller ? 0.3 : 1 }}
+      className="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+    >
       <Link className="navbar-brand" to="/">
         TesoroQuillero
       </Link>
@@ -22,7 +27,7 @@ function Navigation(props) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link initBtn" to="/projects">
+            <Link className="nav-link initBtn text-center" to="/projects">
               Iniciativas
             </Link>
           </li>

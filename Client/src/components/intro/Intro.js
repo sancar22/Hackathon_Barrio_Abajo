@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
-import { selectHome } from "../../actions";
+import { selectHome, deselectHome } from "../../actions";
 import "./Intro.css";
 
 function Intro(props) {
@@ -10,8 +10,13 @@ function Intro(props) {
     dispatch(selectHome());
     setTimeout(() => {
       setDisplayVisible("none");
-    }, 4000);
+    }, 1000);
   };
+  useEffect(() => {
+    if (displayVisible === "visible") {
+      dispatch(deselectHome());
+    }
+  }, []);
   const [displayVisible, setDisplayVisible] = useState("visible");
   const displayHome = useSelector(state => state.initHome);
   const handleClick = () => {
@@ -23,17 +28,18 @@ function Intro(props) {
         className="divH visible"
         style={{ opacity: displayHome ? 0 : 1, display: displayVisible }}
       >
-        <img src="cofre.png" style={{ marginLeft: "25vw" }} />
+        <img
+          src="cofre gofre.png"
+          style={{ width: "100vw", height: "100vh" }}
+        />
 
         <button className="buttonD" onClick={dispHome}>
           Descubre
         </button>
       </div>
-      <div className="backin">
-        <button className="butti" onClick={handleClick}>
-          Mapa
-        </button>
-      </div>
+      <button className="butti" onClick={handleClick}>
+        Mapa
+      </button>
     </div>
   );
 }

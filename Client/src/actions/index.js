@@ -13,6 +13,13 @@ export const selectHome = info => {
   };
 };
 
+export const deselectHome = info => {
+  return {
+    type: "SELECT_HOME_N",
+    payload: info
+  };
+};
+
 export const selectButtonSign = info => {
   return {
     type: "SELECT_SIGNUP",
@@ -32,6 +39,19 @@ export const closeButton = info => {
 export const closeButtonSP = info => {
   return {
     type: "SELECT_CLOSE_SP",
+    payload: info
+  };
+};
+export const correctButton = info => {
+  return {
+    type: "SELECT_CORRECT",
+    payload: info
+  };
+};
+
+export const deCorrectButton = info => {
+  return {
+    type: "SELECT_CORRECT_N",
     payload: info
   };
 };
