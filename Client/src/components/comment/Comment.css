@@ -1,0 +1,26 @@
+.page {
+  width: 100vw;
+  height: 85vh;
+  position: relative;
+}
+.titu {
+  text-align: center;
+  font-weight: bold;
+}
+
+.box {
+  background: grey;
+  border: blue;
+  border-width: 4px;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-top: 5vh;
+  padding: 3% 5%;
+}
+
+.Newone {
+  background: darkgray;
+  border-top: black;
+  border-width: 4px;
+  padding: 2vw;
+}

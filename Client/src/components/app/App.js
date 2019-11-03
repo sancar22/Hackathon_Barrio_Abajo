@@ -9,7 +9,7 @@ import Mural from "../mural/Mural";
 import Museo from "../museo/Museo";
 import Intro from "../intro/Intro";
 import Carnaval from "../carnaval/Carnaval";
-
+import Comment from "../comment/Comment";
 import Projects from "../projects";
 import * as ROUTES from "../../routes/Routes";
 
@@ -30,6 +30,7 @@ function App() {
           <Route exact path={ROUTES.PROJECTS} component={Projects} />
           <Route exact path={ROUTES.INTRO} component={Intro} />
           <Route exact path={ROUTES.CARNAVAL} component={Carnaval} />
+          <Route exact path={ROUTES.COMMENT} component={Comment} />
         </Switch>
       </div>
     </Router>
