@@ -26,11 +26,19 @@ function Intro(props) {
     <div>
       <div
         className="divH visible"
-        style={{ opacity: displayHome ? 0 : 1, display: displayVisible, backgroundImage: 'url(cofre gofre-png)' }}
+        style={{
+          opacity: displayHome ? 0 : 1,
+          display: displayVisible,
+          backgroundImage: "url(cofre gofre-png)"
+        }}
       >
-          <p className="parag">¡Bienvenido a la página oficial del Tesoro Quillero!</p>
-        <img src="cofre gofre.png" alt="" style={{ width: "100vw", height: "100vh" }}/>
-       
+        <p className="parag">¡Bienvenido a la página del Tesoro Quillero!</p>
+        <img
+          src="cofre gofre.png"
+          alt=""
+          style={{ width: "100vw", height: "100vh" }}
+        />
+
         <button className="buttonD" onClick={dispHome}>
           Descubre
         </button>
