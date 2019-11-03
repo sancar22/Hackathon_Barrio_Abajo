@@ -1,13 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import SignIn from "../signIn/SignIn";
 import SignUp from "../signUp/SignUp";
 import "./Proposal.css";
-import { selectButton, deCorrectButton } from "../../actions";
+import { selectButton, deCorrectButton,  closeButton } from "../../actions";
 
 function Proposal(props) {
   const dispatch = useDispatch();
+  useEffect(() => {
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      if (evt.keyCode === 27) {
+        dispatch(closeButton());
+      }
+    };
+  });
   const joinEvent = id => {
     const token = sessionStorage.getItem("token");
     if (token) {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import "./SignUp.css";
 import { useDispatch, useSelector } from "react-redux";
-import { closeButton, closeButtonSP } from "../../actions";
+import { closeButton, closeButtonSP, selectButton } from "../../actions";
 
 function SignUp(props) {
   const disp = useSelector(state => state.buttonSignUp);
@@ -41,10 +41,11 @@ function SignUp(props) {
   };
 
   const close = () => {
-    dispatch(closeButton());
+    dispatch(closeButtonSP());
   };
   const signU = () => {
     dispatch(closeButtonSP());
+    dispatch(selectButton())
   };
 
   return (

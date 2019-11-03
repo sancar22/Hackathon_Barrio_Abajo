@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { withRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { correctButton, deCorrectButton } from "../../actions/index";
+import { correctButton, deCorrectButton, closeButton, closeButtonSP } from "../../actions/index";
 import "./Projects.css";
 import Proposal from "../proposal/Proposal";
 
@@ -21,6 +21,9 @@ function Projects(props) {
       evt = evt || window.event;
       if (evt.keyCode === 27) {
         dispatch(deCorrectButton());
+        dispatch(closeButton())
+        dispatch(closeButtonSP())
+
       }
     };
   });
@@ -28,7 +31,7 @@ function Projects(props) {
     scrollToRef(myRef);
   };
   const scrollToRef = ref => {
-    window.scrollTo(0, ref.current.offsetTop);
+    window.scrollTo(0, ref.current.offsetTop-80);
     //ref.current.focus()
   };
   const handleClickEvent = data => {
@@ -69,7 +72,7 @@ function Projects(props) {
         <div className="container">
           <div className="flat">
             <h1 style={{ fontWeight: "bold", color: "white" }}>
-              Eventos Llaveria
+              Eventos Llavería
             </h1>
           </div>
           <div className="container">

@@ -46,6 +46,7 @@ function SignIn(props) {
   };
   const signU = () => {
     dispatch(selectButtonSign());
+    dispatch(closeButton())
   };
 
   return (
