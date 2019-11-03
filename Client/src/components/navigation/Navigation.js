@@ -5,12 +5,27 @@ import "./Navigation.css";
 
 function Navigation(props) {
   const controller = useSelector(state => state.correctEvent);
+  let signOut = sessionStorage.getItem("token") ? (
+    <li className="nav-item">
+      <div
+        className="nav-link initBtn text-center inic"
+        onClick={() => {
+          sessionStorage.removeItem("token");
+          props.history.push("/");
+        }}
+      >
+        SignOut
+      </div>
+    </li>
+  ) : (
+    ""
+  );
   return (
     <nav
       style={{ opacity: controller ? 0.3 : 1 }}
       className="navbar navbar-expand-lg sticky-top"
     >
-      <Link className="navbar-brand title-brand" to="/"/>
+      <Link className="navbar-brand title-brand" to="/" />
       <button
         className="navbar-toggler initBtn"
         type="button"
@@ -29,6 +44,7 @@ function Navigation(props) {
               Iniciativas
             </Link>
           </li>
+          {signOut}
         </ul>
       </div>
     </nav>
