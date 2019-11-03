@@ -1,5 +1,5 @@
 nav {
-  background-image: url("https://www.csstextures.com/old-paper-T19.jpg");
+  background-color:rgba(204, 163, 98, 0.8);;
   background-repeat: repeat;
 }
 
@@ -15,11 +15,13 @@ nav {
 }
 
 .initBtn {
-  width: 12vw;
-  height: 3.8vw;
-  background-image: url("../../assets/PLACA.png");
+  width: 8vw;
+  height: 10vh;
+  padding-top: 24%;
+  background-image: url("../../assets/mmm.png");
   background-position: top right;
-  background-size: 26vw 8vw;
+  background-size: 8vw 6vw;
   background-repeat: no-repeat;
   font-weight: bold;
+  color: rgb(255, 255, 255);
 }

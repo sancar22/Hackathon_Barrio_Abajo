@@ -4,6 +4,7 @@ import "./Aduana.css";
 
 function Aduana(props) {
   return (
+   
     <div className="backAdu container-fluid">
       <h1 className="titleAdu">EDIFICIO DE LA ADUANA</h1>
       <div className="row">
@@ -28,6 +29,7 @@ function Aduana(props) {
         </p>
       </div>
     </div>
+   
   );
 }
 

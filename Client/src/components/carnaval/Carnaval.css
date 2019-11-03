@@ -1,18 +1,19 @@
 .backCar {
   background-image: url(../../assets/carnaval.png);
-  background-position: 0vh -6vw;
+  background-position: 0vh 4vw;
   background-color: whitesmoke;
   background-size: cover;
-  width: 100vw;
-  height: 87vh;
+  background-repeat: no-repeat;
+  width: 99vw;
+  height: 120vh;
   /* position: absolute; */
 }
 
 .titleCar {
   color: black;
-  font-family: "Raleway";
-  padding-top: 7%;
-  padding-left: 33%;
+  font-family: "Segoe UI";
+  padding-top: 15%;
+  padding-left: 35%;
   font-weight: bold;
 }
 

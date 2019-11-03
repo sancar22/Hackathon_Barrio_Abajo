@@ -1,10 +1,11 @@
 .backMus {
   background-image: url(../../assets/museo.png);
-  background-position: -7vh 0vw;
+  background-position: -7vh 5vw;
   background-color: whitesmoke;
   background-size: cover;
-  width: 100vw;
-  height: 87vh;
+  background-repeat: no-repeat;
+  width: 104vw;
+  height: 102vh;
 }
 
 .titleMus {
