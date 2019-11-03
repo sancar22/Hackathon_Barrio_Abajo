@@ -2,6 +2,8 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "./Aduana.css";
 
+
+
 function Aduana(props) {
   return (
    
@@ -28,7 +30,7 @@ function Aduana(props) {
           </li>
         </p>
       </div>
-    </div>
+    </div>  
    
   );
 }

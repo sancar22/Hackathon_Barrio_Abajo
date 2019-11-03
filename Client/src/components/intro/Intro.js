@@ -36,7 +36,7 @@ function Intro(props) {
         <img
           src="cofre gofre.png"
           alt=""
-          style={{ width: "100vw", height: "100vh" }}
+          style={{ width: "100vw", height: "105vh" }}
         />
 
         <button className="buttonD" onClick={dispHome}>
@@ -53,14 +53,15 @@ function Intro(props) {
         <div className="row">
           <p className="text-light introduc col-md-6">
             Barrio Abajo es uno de los primeros barrios de Barranquilla y cuenta
-            con una gran historia e importancia pora la ciudad y el pais. Asi,
-            nuestra plataforma ha sido creada con el fin de redescubrir el
+            con una gran historia e importancia pora la ciudad y el pais. 
+            
+            Así, nuestra plataforma ha sido creada con el fin de redescubrir el
             Barrio Abajo, conocer sobre sus necesidades y aportar para su
             desarrollo; para el desarrollo de nuestro Tesoro Quillero.
           </p>
         </div>
         <button
-          className="row butti btn-secondary btn-lg "
+          className="row butti btn-secondary btn-lg overB"
           onClick={handleClick}
         >
           Vamos a descubrirlo
