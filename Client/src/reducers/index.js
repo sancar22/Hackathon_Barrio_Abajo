@@ -3,6 +3,7 @@ import buttonSignUpReducer from "./buttonSignUp";
 import correctEventReducer from "./correctEvent";
 import eventCreatorReducer from "./eventCreator";
 import initHomeReducer from "./initHome";
+import proposalIDReducer from "./proposalID";
 import { combineReducers } from "redux";
 
 const allReducer = combineReducers({
@@ -10,7 +11,8 @@ const allReducer = combineReducers({
   buttonSignUp: buttonSignUpReducer,
   initHome: initHomeReducer,
   correctEvent: correctEventReducer,
-  eventCreate: eventCreatorReducer
+  eventCreate: eventCreatorReducer,
+  proposalID: proposalIDReducer
 });
 
 // where you want to use it you have to export {useSelector} from react-redux

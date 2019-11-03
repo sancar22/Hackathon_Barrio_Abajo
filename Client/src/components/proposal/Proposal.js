@@ -1,13 +1,19 @@
-import React, {useEffect} from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import SignIn from "../signIn/SignIn";
 import SignUp from "../signUp/SignUp";
 import "./Proposal.css";
-import { selectButton, deCorrectButton,  closeButton } from "../../actions";
+import {
+  selectButton,
+  deCorrectButton,
+  closeButton,
+  setProposalID
+} from "../../actions";
 
 function Proposal(props) {
   const dispatch = useDispatch();
+
   useEffect(() => {
     document.onkeydown = function(evt) {
       evt = evt || window.event;
@@ -16,6 +22,16 @@ function Proposal(props) {
       }
     };
   });
+  dispatch(setProposalID(props.id));
+
+  const commentEvent = id => {
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      props.history.push("/comment");
+    } else {
+      dispatch(selectButton());
+    }
+  };
   const joinEvent = id => {
     const token = sessionStorage.getItem("token");
     if (token) {
@@ -64,7 +80,14 @@ function Proposal(props) {
           >
             Participar
           </div>
-          <div className="card-link  btn btn-primary">Comentar</div>
+          <div
+            onClick={() => {
+              commentEvent(props.id);
+            }}
+            className="card-link  btn btn-primary"
+          >
+            Comentar
+          </div>
         </div>
       </div>
       <SignIn />

@@ -155,7 +155,7 @@ module Api
 
             def getComments
                 # Search commentss
-                @comments = Comment.all
+                @comments = Comment.where(event_id: params[:comments][:event_id])
                 # If comments
                 if @comments
                     render json: {status: 'DONE', data: @comments}, status: :ok   

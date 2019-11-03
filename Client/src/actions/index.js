@@ -66,3 +66,10 @@ export const closeEventsCreator = info => {
     payload: info
   };
 };
+
+export const setProposalID = info => {
+  return {
+    type: "SET_PROPOSAL_ID",
+    payload: info
+  };
+};
