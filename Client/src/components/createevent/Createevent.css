@@ -1,0 +1,49 @@
+.loginBoxe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 45vw;
+  box-sizing: border-box;
+  background: lightgray;
+}
+
+.eventContainer {
+  position: absolute;
+  top: 50%;
+  left: 34%;
+  width: 30vw;
+  height: 40vw;
+  background-size: cover;
+  z-index: 99999;
+}
+
+.formul1 {
+  padding: 0vh 2vw;
+}
+
+.zindex {
+  z-index: 0;
+}
+.tis {
+  margin-bottom: 0vh;
+  font-weight: bold;
+}
+
+.dropp {
+  padding-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.ins {
+  width: 100%;
+}
+
+.fin {
+  padding-top: 3vh;
+}
+
+.butt {
+  background-color: #b4611e;
+}
