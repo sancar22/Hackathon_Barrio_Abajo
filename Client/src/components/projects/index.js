@@ -84,11 +84,13 @@ function Projects(props) {
       >
         <Createevent />
       </div>
-      <div style={{ opacity: controller ? 0.3 : 1 }}>
+      <div style={{ opacity: controller ? 0.5 : 1 }}>
         <div className="container">
           <div className="flat">
-            <h1 style={{ fontWeight: "bold", color: "white" }}>
-              Eventos Llavería
+            <h1
+              style={{ fontWeight: "bold", color: "white", paddingTop: "20px" }}
+            >
+              EVENTOS LLAVERIA
             </h1>
           </div>
           <div className="container">
