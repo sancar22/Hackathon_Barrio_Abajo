@@ -1,14 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import { withRouter, Link } from "react-router-dom";
+import {useDispatch, useSelector} from 'react-redux';
+import {selectHome, deselectHome} from '../../actions/index'
 import "./Projects.css";
+import Proposal from '../proposal/Proposal'
 
 function Projects(props) {
+  const dispatch = useDispatch()
+  const controller = useSelector((state)=> state.initHome)
   const [projects, setProjects] = useState([]);
   const [social, setSocial] = useState(false);
   const [cultural, setCultural] = useState(false);
   const [aseo, setAseo] = useState(false);
   const [deportiva, setDeportiva] = useState(false);
-
+  const myRef = useRef(null);
+  
+  useEffect(() => {
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      if (evt.keyCode === 27) {
+        dispatch(deselectHome());
+      }
+    };
+  });
+  const executeScroll1 = () =>{
+    scrollToRef(myRef)
+  }
+  const scrollToRef = (ref) =>{
+    window.scrollTo(0, ref.current.offsetTop)
+    //ref.current.focus()
+  }
+  const handleClickEvent = () => {
+       dispatch(selectHome())
+       executeScroll1()
+  }
   useEffect(() => {
     fetch("http://localhost:4000/api/v1/user/events")
       .then(response => {
@@ -18,9 +43,15 @@ function Projects(props) {
         setProjects(data.data);
       });
   }, []);
+
+
+
   return (
-    <div className="container">
-      <div className="flat">
+<div>
+<div ref={myRef} style={{visibility: controller ? 'visible':'hidden'}}><Proposal/> </div>} 
+   <div style={{opacity: controller ? 0.3 : 1}}>
+    <div className="container" >
+      <div className="flat" >
         <h1 style={{ fontWeight: "bold", color: "white" }}>Eventos Llaveria</h1>
       </div>
       <div className="container">
@@ -105,6 +136,7 @@ function Projects(props) {
           >
             Filtrar
           </div>
+       
         </div>
       </div>
       <div className="container-fluid mr-auto ml-4">
@@ -133,18 +165,22 @@ function Projects(props) {
                   <p className="card-text mr-auto ml-auto text-center">
                     {project.place}
                   </p>
-                  <Link
-                    to="/"
+                  <div
+                    onClick = {handleClickEvent}
                     className="btn btn-primary  mr-auto ml-auto text-center"
                   >
                     Ver evento
-                  </Link>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+    </div>
+  
+    </div>
+    
     </div>
   );
 }

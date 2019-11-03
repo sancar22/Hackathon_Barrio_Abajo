@@ -1,0 +1,10 @@
+.divaDaza{
+height: 70vh;
+width: 30vw;
+position: absolute;
+opacity:1;
+background-color: black;
+bottom: 0vh;
+left: 35vw;
+z-index: 1400;
+}
