@@ -1,4 +1,3 @@
-
 export const selectButton = info => {
   return {
     type: "SELECT_SIGNIN",
@@ -27,14 +26,12 @@ export const selectButtonSign = info => {
   };
 };
 
-
 export const closeButton = info => {
   return {
     type: "SELECT_CLOSE",
     payload: info
   };
 };
-
 
 export const closeButtonSP = info => {
   return {
@@ -52,6 +49,20 @@ export const correctButton = info => {
 export const deCorrectButton = info => {
   return {
     type: "SELECT_CORRECT_N",
+    payload: info
+  };
+};
+
+export const openEventsCreator = info => {
+  return {
+    type: "SELECT_EVENT_CREATE",
+    payload: info
+  };
+};
+
+export const closeEventsCreator = info => {
+  return {
+    type: "SELECT_CLOSE_EC",
     payload: info
   };
 };

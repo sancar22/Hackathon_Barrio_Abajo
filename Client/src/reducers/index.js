@@ -1,18 +1,17 @@
-
-import buttonSignInReducer from './buttonSignIn'
-import buttonSignUpReducer from './buttonSignUp'
-import correctEventReducer from './correctEvent'
-import initHomeReducer from './initHome'
-import {combineReducers} from 'redux'
-
-
+import buttonSignInReducer from "./buttonSignIn";
+import buttonSignUpReducer from "./buttonSignUp";
+import correctEventReducer from "./correctEvent";
+import eventCreatorReducer from "./eventCreator";
+import initHomeReducer from "./initHome";
+import { combineReducers } from "redux";
 
 const allReducer = combineReducers({
-    buttonSignIn: buttonSignInReducer,
-    buttonSignUp: buttonSignUpReducer,
-    initHome: initHomeReducer,
-    correctEvent: correctEventReducer
-})
+  buttonSignIn: buttonSignInReducer,
+  buttonSignUp: buttonSignUpReducer,
+  initHome: initHomeReducer,
+  correctEvent: correctEventReducer,
+  eventCreate: eventCreatorReducer
+});
 
 // where you want to use it you have to export {useSelector} from react-redux
 // and do e.g. const = counter = useSelector(state => state.counter)
@@ -27,5 +26,4 @@ const allReducer = combineReducers({
 // a button it will increment current state +5
 // action.type, action.payload
 
-
-export default allReducer
+export default allReducer;

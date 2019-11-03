@@ -50,7 +50,7 @@ body {
 .flat {
   position: relative;
   background-image: url("../../assets/casa.png");
-  background-position: 0% -104%;
+  background-position: 0% -140%;
   width: 100vw;
   height: 12.5vw;
   left: -9.4%;
@@ -68,4 +68,12 @@ body {
   left: 0;
   top: 0;
   z-index: 1500;
+}
+
+.RegEvent {
+  border-style: solid;
+  border-color: black;
+  color: black;
+  margin: 0.2vw;
+  cursor: pointer;
 }

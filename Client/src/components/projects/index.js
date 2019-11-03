@@ -1,13 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import { withRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { correctButton, deCorrectButton, closeButton, closeButtonSP } from "../../actions/index";
+import {
+  correctButton,
+  deCorrectButton,
+  closeButton,
+  closeButtonSP,
+  openEventsCreator
+} from "../../actions/index";
 import "./Projects.css";
 import Proposal from "../proposal/Proposal";
+import Createevent from "../createevent/Createevent";
 
 function Projects(props) {
   const dispatch = useDispatch();
   const controller = useSelector(state => state.correctEvent);
+  const controller2 = useSelector(state => state.eventCreate);
   const [projects, setProjects] = useState([]);
   const [social, setSocial] = useState(false);
   const [cultural, setCultural] = useState(false);
@@ -21,9 +29,8 @@ function Projects(props) {
       evt = evt || window.event;
       if (evt.keyCode === 27) {
         dispatch(deCorrectButton());
-        dispatch(closeButton())
-        dispatch(closeButtonSP())
-
+        dispatch(closeButton());
+        dispatch(closeButtonSP());
       }
     };
   });
@@ -31,7 +38,7 @@ function Projects(props) {
     scrollToRef(myRef);
   };
   const scrollToRef = ref => {
-    window.scrollTo(0, ref.current.offsetTop-80);
+    window.scrollTo(0, ref.current.offsetTop - 80);
     //ref.current.focus()
   };
   const handleClickEvent = data => {
@@ -60,13 +67,22 @@ function Projects(props) {
   ) : (
     ""
   );
+
   return (
-    <div>
+    <div className="zindex" style={{ position: "relative" }}>
       <div
         ref={myRef}
         style={{ visibility: controller ? "visible" : "hidden" }}
       >
         {propo}
+      </div>
+      <div
+        style={{
+          visibility: controller2 ? "visible" : "hidden",
+          position: "relative"
+        }}
+      >
+        <Createevent />
       </div>
       <div style={{ opacity: controller ? 0.3 : 1 }}>
         <div className="container">
@@ -167,6 +183,14 @@ function Projects(props) {
                 className={`btn filterBtn filt`}
               >
                 Filtrar
+              </div>
+              <div
+                onClick={() => {
+                  dispatch(openEventsCreator(true));
+                }}
+                className="RegEvent btn btn-secondary ml-auto"
+              >
+                Crear evento
               </div>
             </div>
           </div>
