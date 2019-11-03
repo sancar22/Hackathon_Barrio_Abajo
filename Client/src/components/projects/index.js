@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef} from "react";
 import { withRouter, Link } from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
-import {selectHome, deselectHome} from '../../actions/index'
+import {correctButton, deCorrectButton} from '../../actions/index'
 import "./Projects.css";
 import Proposal from '../proposal/Proposal'
 
 function Projects(props) {
   const dispatch = useDispatch()
-  const controller = useSelector((state)=> state.initHome)
+  const controller = useSelector((state)=> state.correctEvent)
   const [projects, setProjects] = useState([]);
   const [social, setSocial] = useState(false);
   const [cultural, setCultural] = useState(false);
@@ -19,7 +19,7 @@ function Projects(props) {
     document.onkeydown = function(evt) {
       evt = evt || window.event;
       if (evt.keyCode === 27) {
-        dispatch(deselectHome());
+        dispatch(deCorrectButton());
       }
     };
   });
@@ -31,7 +31,7 @@ function Projects(props) {
     //ref.current.focus()
   }
   const handleClickEvent = () => {
-       dispatch(selectHome())
+       dispatch(correctButton())
        executeScroll1()
   }
   useEffect(() => {

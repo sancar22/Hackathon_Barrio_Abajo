@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux'
 import "./Navigation.css";
 
 function Navigation(props) {
-  const controller = useSelector((state)=> state.initHome)
+  const controller = useSelector((state)=> state.correctEvent)
   return (
     <nav style={{opacity: controller ? 0.3:1}}className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <Link className="navbar-brand" to="/">

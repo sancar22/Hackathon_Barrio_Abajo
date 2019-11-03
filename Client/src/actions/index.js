@@ -42,3 +42,16 @@ export const closeButtonSP = info => {
     payload: info
   };
 };
+export const correctButton = info => {
+  return {
+    type: "SELECT_CORRECT",
+    payload: info
+  };
+};
+
+export const deCorrectButton = info => {
+  return {
+    type: "SELECT_CORRECT_N",
+    payload: info
+  };
+};
