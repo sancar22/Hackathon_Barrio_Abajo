@@ -27,3 +27,4 @@ about any of the events. (100% done)
 
 - Making the creation form functional. (30%)
 
+TO RUN GO TO CLIENT FOLDER, NPM INSTALL AND NPM START.
