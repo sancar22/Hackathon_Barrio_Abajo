@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Hackathon_Barrio_Abajo/static/css/main.e882433a.chunk.css",
+    "main.js": "/Hackathon_Barrio_Abajo/static/js/main.efcff59e.chunk.js",
+    "main.js.map": "/Hackathon_Barrio_Abajo/static/js/main.efcff59e.chunk.js.map",
+    "runtime~main.js": "/Hackathon_Barrio_Abajo/static/js/runtime~main.bfbb7410.js",
+    "runtime~main.js.map": "/Hackathon_Barrio_Abajo/static/js/runtime~main.bfbb7410.js.map",
+    "static/css/2.098bc035.chunk.css": "/Hackathon_Barrio_Abajo/static/css/2.098bc035.chunk.css",
+    "static/js/2.9b4642cd.chunk.js": "/Hackathon_Barrio_Abajo/static/js/2.9b4642cd.chunk.js",
+    "static/js/2.9b4642cd.chunk.js.map": "/Hackathon_Barrio_Abajo/static/js/2.9b4642cd.chunk.js.map",
+    "index.html": "/Hackathon_Barrio_Abajo/index.html",
+    "precache-manifest.69ae76faed8f2b8aa97c780ba858424b.js": "/Hackathon_Barrio_Abajo/precache-manifest.69ae76faed8f2b8aa97c780ba858424b.js",
+    "service-worker.js": "/Hackathon_Barrio_Abajo/service-worker.js",
+    "static/css/2.098bc035.chunk.css.map": "/Hackathon_Barrio_Abajo/static/css/2.098bc035.chunk.css.map",
+    "static/css/main.e882433a.chunk.css.map": "/Hackathon_Barrio_Abajo/static/css/main.e882433a.chunk.css.map",
+    "static/media/Navigation.css": "/Hackathon_Barrio_Abajo/static/media/mmm.4f910dad.png",
+    "static/media/Mural.css": "/Hackathon_Barrio_Abajo/static/media/Mural.489024cd.png",
+    "static/media/Aduana.css": "/Hackathon_Barrio_Abajo/static/media/aduana.e374732a.png",
+    "static/media/Carnaval.css": "/Hackathon_Barrio_Abajo/static/media/carnaval.5171a3f8.png",
+    "static/media/Projects.css": "/Hackathon_Barrio_Abajo/static/media/casa.7778352f.png",
+    "static/media/Intro.css": "/Hackathon_Barrio_Abajo/static/media/casas.9b0588fe.png",
+    "static/media/Museo.css": "/Hackathon_Barrio_Abajo/static/media/museo.3ef42ada.png"
+  }
+}
