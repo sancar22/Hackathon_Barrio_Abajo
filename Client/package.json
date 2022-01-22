@@ -9,7 +9,7 @@
     "leaflet": "^1.5.1",
     "lodash": "^4.17.15",
     "mdbreact": "^4.20.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "node-sass": "^4.13.0",
     "raleway-webfont": "^3.0.1",
     "react": "^16.10.2",
